@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import json
 import os
 
@@ -56,8 +57,10 @@ def run(
     file_extra_rules
 ):
     """Run TH to ATen porting.
+
+    For each file you want to port use the parameter `-f` or `--th_file`.
     
-    If you want to pass more extra rules use the parameter: --file_extra_rules
+    If you want to pass more extra rules use the parameter `-r`_or `--file_extra_rules`.
     
     Example of file with extra rules (json format):
     
@@ -66,8 +69,6 @@ def run(
       "#include <THCUNN/Im2Col.h>": "#include <ATen/cuda/Im2Col.h>",
       "kH": "kernel_height",
       "kW": "kernel_width",
-      "dH": "dilation_height",
-      "dW": "dilation_width",
       "padH": "pad_height",
       "padW": "pad_width",
       "sH": "stride_height",
@@ -76,6 +77,15 @@ def run(
       "nBlocksW": "n_blocks_width",
       "shapeCheck": "shape_check"
     }
+
+    Example of how to use this command:
+
+    \b
+    ./th2at.py --cpu \\
+      -f VolumetricFullDilatedConvolution.c \\
+      -o ~/tmp/pytorch \\
+      -p $PYTORCH_SRC_PATH \\ 
+      -r ~/tmp/th2at.json
     
     """
     if cpu == gpu:
