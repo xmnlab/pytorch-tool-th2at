@@ -10,7 +10,7 @@ It has an initial rules for the convertion. If you want to add more rules, pleas
 - [nn_th2at4cpu.py/replace rules](https://github.com/xmnlab/pytorch-dev-tools/blob/c214a5a5b158113ec640b4bf3519dc94a8c98c01/pytorch_dev_tools/nn_th2at4cpu.py#L11) for CPU only
 - [nn_th2at4gpu.py/replace rules](https://github.com/xmnlab/pytorch-dev-tools/blob/c214a5a5b158113ec640b4bf3519dc94a8c98c01/pytorch_dev_tools/nn_th2at4gpu.py#L11) for GPU only
 
-The `TH to ATen` script is at [pytorch_dev_tools/th2at.py](https://github.com/xmnlab/pytorch-dev-tools/blob/master/pytorch_dev_tools/th2at.py). Following there is an example how to use this script:
+The `TH to ATen` script is at [th2at.py](https://github.com/xmnlab/pytorch-dev-tools/blob/master/pytorch_dev_tools/th2at.py). Following there is an example how to use this script:
 
 ```sh
 

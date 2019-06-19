@@ -4,8 +4,8 @@ import os
 
 import click
 
-from pytorch_dev_tools.nn_th2at4cpu import NN_TH2AT_CPU
-from pytorch_dev_tools.nn_th2at4gpu import NN_TH2AT_CUDA
+from pytorch_tool_th2at.nn_th2at4cpu import NN_TH2AT_CPU
+from pytorch_tool_th2at.nn_th2at4gpu import NN_TH2AT_CUDA
 
 
 @click.command()
@@ -84,7 +84,7 @@ def run(
     ./th2at.py --cpu \\
       -f VolumetricFullDilatedConvolution.c \\
       -o ~/tmp/pytorch \\
-      -p $PYTORCH_SRC_PATH \\ 
+      -p $PYTORCH_SRC_PATH \\
       -r ~/tmp/th2at.json
     
     """

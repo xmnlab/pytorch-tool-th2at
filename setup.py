@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='pytorch_dev_tools',
+    name='pytorch_tool_th2at',
     version='0.1',
-    description='Some tools that helps pytorch development',
-    url='http://github.com/xmnlab/pytorch_dev_tools/',
+    description='A tool that helps to convert TH code to ATen code',
+    url='http://github.com/xmnlab/pytorch-tool-th2at/',
     author='Ivan Ogasawara',
     author_email='ivan.ogasawara@gmail.com',
     license='MIT',

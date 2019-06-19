@@ -1,6 +1,6 @@
 import os
 
-from pytorch_dev_tools.nn_th2at import NN_TH2AT
+from pytorch_tool_th2at.nn_th2at import NN_TH2AT
 
 
 class NN_TH2AT_CPU(NN_TH2AT):
